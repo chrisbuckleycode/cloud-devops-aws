@@ -22,6 +22,7 @@ For simplicity, Terraform state is local. Ensure you use a remote backend for pr
 ### Cross-Account Steps
 - Account A: Bucket policy allowing account B to s3:ListBucket, s3:GetObject (administrators automatically inherit) REQUIRES knowing A/C B principal (user or role coming in).
 - Account A: Bind above policy to bucket
+- Account B: User
 - Account B: Role
 - Account B: Identity policy allowing access to bucket (delegation to user) REQUIRES knowing Bucket name in A/C A.
 - Account B: Bind above policy to role
@@ -40,3 +41,4 @@ $ export AWS_DEFAULT_REGION=us-east-1
 ```
 
 ## Future Ideas
+- Testing
